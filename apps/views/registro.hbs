@@ -1,0 +1,198 @@
+<section class="container">
+  <!-- empieza nav superior -->
+  <nav class="">
+    <div class="col-md-5 pull-left">
+      <div class="">
+        <div id = "prueba">{{arreglo}}</div>
+        <h1>Registro Directorio</h1>
+      </div>
+    </div>
+    <div class="col-md-5 pull-right">
+      <div class="">
+        <a href="registro" class="btn btn-primary btn-block">Registro</a>
+        <a href="#" class="btn btn-success btn-block">Login</a>
+      </div>
+    </div>
+  </nav>
+</section>
+<section id="registro">
+  <div class="container" >
+    <div class="row">
+      <div class="panel">
+        <div class="panel-body">
+          <h4>Registrar nuevo:</h4>
+          <form>
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="nombreMed" placeholder="Nombre">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="apellidoMed" placeholder="Apellido">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="correoMed" placeholder="Correo">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="telefonoMed" placeholder="Teléfono">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="especialidadMed" placeholder="Especialidad">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-8">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="calleMed" placeholder="Calle">
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="numeroMed" placeholder="Numero">
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="coloniaMed" placeholder="Colonia">
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="cpMed" placeholder="Codigo Postal">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="calle1Med" placeholder="Entre calle A">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="calle2Med" placeholder="Y calle B">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="ciudadMed" placeholder="Ciudad">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="estadoMed" placeholder="Estado">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <button class="btn btn-info btn-md btn-block" id="btn">
+                      Guardar
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="panel">
+        <div class="panel-body">
+          <h4>Lista de medicos registrados</h4>
+          <form>
+            <table class="table">
+              <caption></caption>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Nombre Completo</th>
+                  <th>Correo</th>
+                  <th>Teléfono</th>
+                  <th>Dirección</th>
+                  <th>Especialidad</th>
+                  <th>Editar</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!--<tr>
+                  <th scope="row">0</th>
+                  <td>{{Nombre}} {{Apellido}}</td>
+                  <td>{{Correo}}</td>
+                  <td>{{Telefono}}</td>
+                  <td>
+                    <address>
+                      <strong>{{Calle}} #{{Numero}}</strong><br>
+                      Entre {{calle1}} y {{calle2}}<br>
+                      {{Colonia}}, CP:{{CP}}<br>
+                      {{Ciudad}}, {{Estado}}<br>
+                    </address>
+                  </td>
+                  <td>{{Especialidad}}</td>
+                  <td>
+                    <button class="btn btn-info">
+                      <span class="glyphicon glyphicon-pencil"></span>
+                    </button></td>
+                </tr>-->
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Juan Carlos Medina Mtz</td>
+                  <td>drmedinam@correo.com</td>
+                  <td>8712602226</td>
+                  <td>
+                    <address>
+                      <strong>Rovirosa Wade #605</strong><br>
+                      Entre Xochimilco y La Paz<br>
+                      Nueva California, CP:27089<br>
+                      Torreón, Coahuila<br>
+                    </address>
+                  </td>
+                  <td>Neurocirujano</td>
+                  <td>
+                    <button class="btn btn-info">
+                      <span class="glyphicon glyphicon-pencil"></span>
+                    </button></td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Oto Rinol Aringo Logo</td>
+                  <td>dr.rino@correo.com</td>
+                  <td>3312345678</td>
+                  <td>
+                    <address>
+                      <strong>Santo Tomas de Aquino #5766</strong><br>
+                      Entre Xochimilco y Tchaikovsky<br>
+                      Arcos de Guadalupe, CP:45037<br>
+                      Zapopan, Jalisco<br>
+                    </address>
+                  </td>
+                  <td>Orejologo</td>
+                  <td>
+                    <button class="btn btn-info">
+                      <span class="glyphicon glyphicon-pencil"></span>
+                    </button></td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--<section id="vendedores">
+  <div class="container">
+  </div>
+</section>
+-->
