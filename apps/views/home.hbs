@@ -1,10 +1,10 @@
 <section id="principal">
   <section class="container">
-
     <!-- empieza nav superior -->
     <nav class="">
       <div class="col-md-5 pull-left">
         <div class="">
+          <h1>Home</h1>
         </div>
       </div>
       <div class="col-md-5 pull-right">
@@ -15,6 +15,7 @@
       </div>
     </nav>
   </section>
+
   <!-- empieza zona de slide -->
   <section class="container">
     <div class="row">
@@ -291,3 +292,31 @@
     <div class="container">
     </div>
   </section>
+  <script type="text/javascript">
+  $(document).ready(function() {
+    $('.carousel').carousel({interval: 7000});
+  });
+  </script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $("#sel-busqueda").change(function(){
+      $(this).find("option:selected").each(function(){
+        if($(this).attr("value")=="especialidad"){
+          $(".box").not(".esp").hide();
+          $(".esp").show();
+        }
+        else if($(this).attr("value")=="medico"){
+          $(".box").not(".med").hide();
+          $(".med").show();
+        }
+        else if($(this).attr("value")=="padecimiento"){
+          $(".box").not(".pad").hide();
+          $(".pad").show();
+        }
+        else{
+          $(".box").hide();
+        }
+      });
+    }).change();
+  });
+  </script>
