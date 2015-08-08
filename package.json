@@ -1,6 +1,6 @@
 {
 	"name":"intermed",
-	"version":"0.0.0.0",
+	"version":"0.0.0",
 	"description":"La red social de la salud",
 	"author": "New Channel",
 	"contributors":
@@ -22,7 +22,7 @@
 			"email":"jorge@newchannel.mx"
 		}
 	],
-	"preferGlobal": "true", //instalar global
+	"preferGlobal": "true",
 	"dependencies":{
 		"express": "4.13.3",
 		"express-handlebars": "2.0.1",

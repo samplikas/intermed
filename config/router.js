@@ -16,6 +16,7 @@ var app = express();
 var url = require('url');
 //con esta linea se carga el servidor
 var serv = require('./server');
+var bodyParser = require('body-parser');
 
 //las siguientes lineas, son para indicar donde se encuentran los archivos y con cual sera el que sea el principal
 app.set('view engine', 'hbs');
@@ -26,6 +27,9 @@ app.set('views', __dirname + '/../apps/views');
 //paginas estaticas donde se encontraran los archivos externos al proyecto en este caso css, js, img, etc...
 app.use(express.static( __dirname + '/../public'));
 
+app.use(bodyParser.json()); // support json encoded bodies
+app.use(bodyParser.urlencoded({	extended: true })); // support encoded bodies
+
 //llamado de la clase con la que se podra cargar los controladores
 var intermed = require('../apps/controllers/intermed');
 var object = ["tacos","tortas","ahogadas"];//Esto es lo que se recibe de la vista para el envio de controlador 
@@ -35,10 +39,29 @@ var object = ["tacos","tortas","ahogadas"];//Esto es lo que se recibe de la vist
 */
 var iniciar = function()
 {
-	//route
+	//Home
 	app.get('/', function( req, res ){ intermed.callController('Home', 'sayHello', object, res) });
 
+	//Registro
 	app.get('/registro', function( req, res ){ intermed.callController('registro', 'index', object, res) });
+	app.post('/registro', function( req, res ){
+		var object = {
+						'Nombre': req.body.nombreMed,
+						'Apellido': req.body.apellidoMed,
+						'Correo': req.body.correoMed,
+						'Telefono': req.body.telefonoMed,
+						'Calle': req.body.calleMed,
+						'Numero': req.body.numeroMed,
+						'calle1': req.body.calle1Med,
+						'calle2': req.body.calle2Med,
+						'Colonia': req.body.coloniaMed,
+						'CP': req.body.cpMed,
+						'Ciudad': req.body.ciudadMed,
+						'Estado': req.body.estadoMed,
+						'Especialidad': req.body.especialidadMed
+					};
+		intermed.callController('registro', 'registrar', object, res) 
+	});
 }
 serv.server(app, 3000);
 
