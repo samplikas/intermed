@@ -21,28 +21,28 @@
       <div class="panel">
         <div class="panel-body">
           <h4>Registrar nuevo:</h4>
-          <form>
+          <form method="POST">
             <div class="col-md-6">
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group">
-                    <input type="text" class="form-control" id="nombreMed" placeholder="Nombre">
+                    <input type="text" class="form-control" id="nombreMed" name="nombreMed" placeholder="Nombre">
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control" id="apellidoMed" placeholder="Apellido">
+                    <input type="text" class="form-control" id="apellidoMed" name="apellidoMed" placeholder="Apellido">
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control" id="correoMed" placeholder="Correo">
+                    <input type="text" class="form-control" id="correoMed" name="correoMed" placeholder="Correo">
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control" id="telefonoMed" placeholder="Teléfono">
+                    <input type="text" class="form-control" id="telefonoMed" name="telefonoMed" placeholder="Teléfono">
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group">
-                    <input type="text" class="form-control" id="especialidadMed" placeholder="Especialidad">
+                    <input type="text" class="form-control" id="especialidadMed" name="especialidadMed" placeholder="Especialidad">
                   </div>
                 </div>
               </div>
@@ -51,51 +51,49 @@
               <div class="row">
                 <div class="col-md-8">
                   <div class="form-group">
-                    <input type="text" class="form-control" id="calleMed" placeholder="Calle">
+                    <input type="text" class="form-control" id="calleMed" name="calleMed" placeholder="Calle">
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="form-group">
-                    <input type="text" class="form-control" id="numeroMed" placeholder="Numero">
+                    <input type="text" class="form-control" id="numeroMed" name="numeroMed" placeholder="Numero">
                   </div>
                 </div>
                 <div class="col-md-8">
                   <div class="form-group">
-                    <input type="text" class="form-control" id="coloniaMed" placeholder="Colonia">
+                    <input type="text" class="form-control" id="coloniaMed" name="coloniaMed" placeholder="Colonia">
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="form-group">
-                    <input type="text" class="form-control" id="cpMed" placeholder="Codigo Postal">
+                    <input type="text" class="form-control" id="cpMed" name="cpMed" placeholder="Codigo Postal">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <input type="text" class="form-control" id="calle1Med" placeholder="Entre calle A">
+                    <input type="text" class="form-control" id="calle1Med" name="calle1Med" placeholder="Entre calle A">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <input type="text" class="form-control" id="calle2Med" placeholder="Y calle B">
+                    <input type="text" class="form-control" id="calle2Med" name="calle2Med" placeholder="Y calle B">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <input type="text" class="form-control" id="ciudadMed" placeholder="Ciudad">
+                    <input type="text" class="form-control" id="ciudadMed" name="ciudadMed" placeholder="Ciudad">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <input type="text" class="form-control" id="estadoMed" placeholder="Estado">
+                    <input type="text" class="form-control" id="estadoMed" name="estadoMed" placeholder="Estado">
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group">
-                    <button class="btn btn-info btn-md btn-block" id="btn">
-                      Guardar
-                    </button>
+                    <input type="submit" class="btn btn-info btn-md btn-block" id="btn" value="Guardar">
                   </div>
                 </div>
               </div>
@@ -126,7 +124,7 @@
                 </tr>
               </thead>
               <tbody>
-                <!--<tr>
+                <tr>
                   <th scope="row">0</th>
                   <td>{{Nombre}} {{Apellido}}</td>
                   <td>{{Correo}}</td>
@@ -144,7 +142,7 @@
                     <button class="btn btn-info">
                       <span class="glyphicon glyphicon-pencil"></span>
                     </button></td>
-                </tr>-->
+                </tr>
                 <tr>
                   <th scope="row">1</th>
                   <td>Juan Carlos Medina Mtz</td>

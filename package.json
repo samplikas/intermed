@@ -22,7 +22,7 @@
 			"email":"jorge@newchannel.mx"
 		}
 	],
-	"preferGlobal": "true", //instalar global
+	"preferGlobal": "true",
 	"dependencies":{
 		"express": "4.13.3",
 		"express-handlebars": "2.0.1",
