@@ -37,6 +37,8 @@ var iniciar = function()
 {
 	//route
 	app.get('/', function( req, res ){ intermed.callController('Home', 'sayHello', object, res) });
+
+	app.get('/registro', function( req, res ){ intermed.callController('registro', 'index', object, res) });
 }
 serv.server(app, 3000);
 
