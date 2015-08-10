@@ -43,9 +43,14 @@ var iniciar = function()
 	app.get('/', function( req, res ){ intermed.callController('Home', 'sayHello', object, res) });
 
 	//Registro
-	app.get('/registro', function( req, res ){ intermed.callController('registro', 'index', object, res) });
+	app.get('/registro', function( req, res ){ intermed.callController('registro', 'index', object, res)});
+
 	app.post('/registro', function( req, res ){
-		var object = {
+		console.log(req.body.getAll);
+		if (req.body.getAll === '1'){
+			intermed.callController('registro', 'getAll', object, res) 
+		} else {
+			var object = {
 						'nombre': req.body.nombreMed,
 						'apellido': req.body.apellidoMed,
 						'correo': req.body.correoMed,
@@ -60,7 +65,10 @@ var iniciar = function()
 						'estado': req.body.estadoMed,
 						'especialidad': req.body.especialidadMed
 					};
-		intermed.callController('registro', 'registrar', object, res) 
+			intermed.callController('registro', 'registrar', object, res) 
+			//intermed.callController('registro', 'registrar', object, res) 
+		}
+
 	});
 }
 serv.server(app, 3000);
