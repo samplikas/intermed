@@ -65,8 +65,7 @@ var iniciar = function()
 						'estado': req.body.estadoMed,
 						'especialidad': req.body.especialidadMed
 					};
-			intermed.callController('registro', 'registrar', object, res) 
-			//intermed.callController('registro', 'registrar', object, res) 
+			intermed.callController('registro', 'registrar', object, res);
 		}
 
 	});
