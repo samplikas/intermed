@@ -21,7 +21,7 @@
       <div class="panel">
         <div class="panel-body">
           <h4>Registrar nuevo:</h4>
-          <form method="POST">
+          <form method="POST" action="registrar">
             <div class="col-md-6">
               <div class="row">
                 <div class="col-md-12">
@@ -42,7 +42,11 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group">
-                    <input type="text" class="form-control" id="especialidadMed" name="especialidadMed" placeholder="Especialidad">
+                    <select class="form-control" id="especialidadMed" name="especialidadMed" placeholder="Estado">
+                      {{#each especialidades}}
+                      <option id="{{id}}">{{descripcion}}</option>
+                      {{/each}}
+                    </select>
                   </div>
                 </div>
               </div>
@@ -81,12 +85,16 @@
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <input type="text" class="form-control" id="ciudadMed" name="ciudadMed" placeholder="Ciudad">
+                    <select class="form-control" id="estadoMed" name="estadoMed" placeholder="Estado">
+                      {{#each estados}}
+                      <option id="{{id}}">{{estado}}</option>
+                      {{/each}}
+                    </select>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <input type="text" class="form-control" id="estadoMed" name="estadoMed" placeholder="Estado">
+                    <input type="text" class="form-control" id="ciudadMed" name="ciudadMed" placeholder="Ciudad">
                   </div>
                 </div>
               </div>
@@ -124,17 +132,18 @@
                 </tr>
               </thead>
               <tbody>
+                {{#each medicos}}
                 <tr>
-                  <th scope="row">0</th>
-                  <td>{{Nombre}} {{Apellido}}</td>
-                  <td>{{Correo}}</td>
-                  <td>{{Telefono}}</td>
+                  <th scope="row">{{id}}</th>
+                  <td>{{DatosGenerale.nombre}} {{DatosGenerale.apellidoP}}  {{DatosGenerale.apellidoM}}</td>
+                  <td>{{correo}}</td>
+                  <td>{{Telefono.telefono}}</td>
                   <td>
                     <address>
-                      <strong>{{Calle}} #{{Numero}}</strong><br>
-                      Entre {{calle1}} y {{calle2}}<br>
-                      {{Colonia}}, CP:{{CP}}<br>
-                      {{Ciudad}}, {{Estado}}<br>
+                      <strong>{{Direccion.calle}} #{{Direccion.numero}}</strong><br>
+                      Entre {{Direccion.calle1}} y {{Direccion.calle2}}<br>
+                      {{Direccion.colonia}}, CP:{{Direccion.cp}}<br>
+                      {{Direccion.ciudad}}, {{Direccion.estado}}<br>
                     </address>
                   </td>
                   <td>{{Especialidad}}</td>
@@ -143,44 +152,7 @@
                       <span class="glyphicon glyphicon-pencil"></span>
                     </button></td>
                 </tr>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Juan Carlos Medina Mtz</td>
-                  <td>drmedinam@correo.com</td>
-                  <td>8712602226</td>
-                  <td>
-                    <address>
-                      <strong>Rovirosa Wade #605</strong><br>
-                      Entre Xochimilco y La Paz<br>
-                      Nueva California, CP:27089<br>
-                      Torreón, Coahuila<br>
-                    </address>
-                  </td>
-                  <td>Neurocirujano</td>
-                  <td>
-                    <button class="btn btn-info">
-                      <span class="glyphicon glyphicon-pencil"></span>
-                    </button></td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Oto Rinol Aringo Logo</td>
-                  <td>dr.rino@correo.com</td>
-                  <td>3312345678</td>
-                  <td>
-                    <address>
-                      <strong>Santo Tomas de Aquino #5766</strong><br>
-                      Entre Xochimilco y Tchaikovsky<br>
-                      Arcos de Guadalupe, CP:45037<br>
-                      Zapopan, Jalisco<br>
-                    </address>
-                  </td>
-                  <td>Orejologo</td>
-                  <td>
-                    <button class="btn btn-info">
-                      <span class="glyphicon glyphicon-pencil"></span>
-                    </button></td>
-                </tr>
+                {{/each}}
               </tbody>
             </table>
           </form>

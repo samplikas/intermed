@@ -17,7 +17,7 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
-        Direccion.hasOne(models.Estado);
+    //    Direccion.hasOne(models.Estado);
 
         Direccion.belongsTo(models.Usuario, {
           onDelete: "CASCADE",

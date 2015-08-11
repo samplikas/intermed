@@ -7,7 +7,7 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
-        Estado.belongsTo(models.Direccion);
+        //Estado.belongsTo(models.Direccion);
       }
     },
     timestamps: false,

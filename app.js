@@ -9,11 +9,15 @@
 *	@date 04/08/2015
 */
 
+
 //librerias requeridas
-var arranca = require('./config/router');
+//var arranca = require('./config/router');
+var server = require('./config/server');
+server.iniciar();
+
 // carga del archivo intermed para la carga de los controladores encontrados en ese fichero
 
 
 //jdjdj
 // se arranca el servidor
-arranca.iniciar();
+//arranca.iniciar();

@@ -11,6 +11,7 @@ module.exports = function(sequelize, DataTypes) {
     estatusActivacion: {type: DataTypes.STRING, required: true}
   }, {
     classMethods: {
+      // asociaciones con otras tablas
       associate: function(models) {
         Usuario.hasOne(models.Medico);
         Usuario.hasOne(models.DatosGenerales);
@@ -18,11 +19,11 @@ module.exports = function(sequelize, DataTypes) {
         Usuario.hasOne(models.Telefono);
       }
     },
-   timestamps: false,
+   timestamps: false,  //elimina los campos de crated_at, update_at y remove_at
    paranoid: true,
    underscored: true,
-   freezeTableName: true,
-   tableName: 'usuarios'
+   freezeTableName: true,  // forza a que se tome minúsculas el nomde de tabla
+   tableName: 'usuarios'  // se especifica el nombre  real en la base de datos
   });
 
   return Usuario;

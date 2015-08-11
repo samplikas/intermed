@@ -7,7 +7,7 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
-        Especialidad.belongsTo(models.Medico,  {through: 'MedicoEspecialidad'})
+        //Especialidad.belongsTo(models.Medico,  {through: 'MedicoEspecialidad'})
       }
     },
     timestamps: false,
