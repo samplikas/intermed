@@ -43,24 +43,31 @@ var iniciar = function()
 	app.get('/', function( req, res ){ intermed.callController('Home', 'sayHello', object, res) });
 
 	//Registro
-	app.get('/registro', function( req, res ){ intermed.callController('registro', 'index', object, res) });
+	app.get('/registro', function( req, res ){ intermed.callController('registro', 'index', object, res)});
+
 	app.post('/registro', function( req, res ){
-		var object = {
-						'Nombre': req.body.nombreMed,
-						'Apellido': req.body.apellidoMed,
-						'Correo': req.body.correoMed,
-						'Telefono': req.body.telefonoMed,
-						'Calle': req.body.calleMed,
-						'Numero': req.body.numeroMed,
+		console.log(req.body.getAll);
+		if (req.body.getAll === '1'){
+			intermed.callController('registro', 'getAll', object, res) 
+		} else {
+			var object = {
+						'nombre': req.body.nombreMed,
+						'apellido': req.body.apellidoMed,
+						'correo': req.body.correoMed,
+						'telefono': req.body.telefonoMed,
+						'calle': req.body.calleMed,
+						'numero': req.body.numeroMed,
 						'calle1': req.body.calle1Med,
 						'calle2': req.body.calle2Med,
-						'Colonia': req.body.coloniaMed,
+						'colonia': req.body.coloniaMed,
 						'CP': req.body.cpMed,
-						'Ciudad': req.body.ciudadMed,
-						'Estado': req.body.estadoMed,
-						'Especialidad': req.body.especialidadMed
+						'ciudad': req.body.ciudadMed,
+						'estado': req.body.estadoMed,
+						'especialidad': req.body.especialidadMed
 					};
-		intermed.callController('registro', 'registrar', object, res) 
+			intermed.callController('registro', 'registrar', object, res);
+		}
+
 	});
 }
 serv.server(app, 3000);
