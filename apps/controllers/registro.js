@@ -35,7 +35,22 @@ module.exports = {
 			'especialidad': 'Especialidad'
 		},
 		{
-			'nombre': 'Médico 2',
+			'nombre': 'Médico 1',
+			'apellido': 'Apellido',
+			'correo': 'Correo',
+			'telefono': 'Teléfono',
+			'calle': 'Calle', 
+			'numero': 'Número',
+			'calle1': 'Calle1',
+			'calle2': 'Calle 2',
+			'colonia': 'Colonia',
+			'CP': 'CP',
+			'ciudad': 'Ciudad',
+			'estado': 'Estado',
+			'especialidad': 'Especialidad'
+		},
+		{
+			'nombre': 'Médico 3',
 			'apellido': 'Apellido',
 			'correo': 'Correo',
 			'telefono': 'Teléfono',
