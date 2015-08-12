@@ -9,7 +9,7 @@
 *	@date 04/08/2015
 */
 
-//librerias requeridas
+//librerias requerida
 var arranca = require('./config/router');
 // carga del archivo intermed para la carga de los controladores encontrados en ese fichero
 
